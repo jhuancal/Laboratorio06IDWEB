@@ -16,22 +16,21 @@
             </ul>
         </nav>
     </header>
-    <h1>Formulario de Registro</h1>
+    <h1>Formulario con Validaciones</h1>
     <form action="#" method="post">
-        <label>Nombre</label>
-        <input type="text" name="nombre" id="formNombre" placeholder="*Jhoans Anthony Huanca Lupaca">
-        <br><br>
-
         <label>Correo</label>
-        <input type="email" name="email" id="formEmail" placeholder="*jhuancal@unsa.edu.pe">
+        <input type="email" name="email" id="formEmail" placeholder="*jhuancal@unsa.edu.pe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         <br><br>
 
-        <input type="checkbox" name="promociones" id="formPromociones">
-        <label>Acepto recibir correos promocionales</label>
+        <label>Contraseña</label>
+        <input type="password" name="contrasenia" id="formContrasenia" minlength="6" maxlength="12" placeholder="************" required>
         <br><br>
 
-        <button type="submit">Suscribirse</button>
-        <button type="reset">Limpiar</button>
+        <label>Confirmar contraseña</label>
+        <input type="password" name="confirmar" id="formConfirmar" required>
+        <br><br>
+
+        <button type="submit">Confirmar</button>
     </form>
 </body>
 </html>
