@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 06</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul style="list-style: none;">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="lenguajes.html">Lenguajes</a></li>
+                <li><a href="validaciones.html">Validaciones</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Formulario de Inscripcion de Cursos</h1>
+    <form action="#" method="post">
+        <label>Nombre</label>
+        <input type="text" name="nombre" id="formNombre" placeholder="*Jhoans Anthony" required>
+        <br><br>
+
+        <label>Apellido</label>
+        <input type="text" name="apellido" id="formApellido" placeholder="*Huanca Lupaca" required>
+        <br><br>
+
+        <label>Documento de Indentidad</label>
+        <input type="number" name="dni" id="formDni" min="10000000" max="99999999" placeholder="*73387508" required>
+        <br><br>
+
+        <label>Correo Electronico</label>
+        <input type="email" name="email" id="formEmail" placeholder="*jhuancal@unsa.edu.pe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <br><br>
+        
+        <label>Seleccion del Curso</label>
+        <br>
+        <select name="cursos" id="dropCurso">
+            <option value="IDWEB">Introduccion al Desarrollo Web</option>
+            <option value="DSOOO">Desarrollo de Software Orientado a Objetos</option>
+            <option value="ED">Estructuras Discretas</option>
+        </select>
+        <br><br>
+
+        <input type="radio" name="radioPre" id="radioPre" value="PRESENCIAL">
+        <label for="radioPre">Presencial</label>
+        <input type="radio" name="radioPre" id="radioPre" value="VIRTUAL">
+        <label for="radioPre">Virtual</label>
+        <br><br>
+
+        <label>Horarios Disponibles</label>
+        <br>
+        <select name="horario" id="dropHorario" multiple>
+            <option value="M">Mañana</option>
+            <option value="T">Tarde</option>
+            <option value="N">Noche</option>
+        </select>
+        <br><br>
+
+        <label>Mensaje</label>
+        <textarea name="mensaje" id="formMensaje"></textarea>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Restablecer</button>
+    </form>
+</body>
+</html>
